@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="myapp">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">豆瓣</a>
+        </div>
+        <form class="navbar-form navbar-left">
+
+            <input type="text" class="form-control" placeholder="Search...">
+
+        </form>
+        <div class="navbar-collapse collapse navbar-right" id="example-navbar-collapse">
+            <ul class="nav navbar-nav nav-pills">
+                <li><a href="#/movie">电影</a></li>
+                <li><a href="#/book">图书</a></li>
+                <li><a href="#/music">音乐</a></li>
+                <li><a href="#">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main" ng-view></div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js/"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="movie/controller.js"></script>
+<script src="book/controller.js"></script>
+<script src="music/controller.js"></script>
+</body>
+</html>

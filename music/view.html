@@ -1,0 +1,17 @@
+
+<h2 ng-if="message" class="page-header">{{message}}</h2>
+<div class="list-group">
+    <a class="list-group-item" href="#/detail/{{item.id}}" ng-repeat="item in music">
+        <span class="badge">{{item.rating.average}}</span>
+        <div class="media">
+            <div class="media-left">
+                <img class="media-object" ng-src="{{item.image}}" alt="{{item.title}}">
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading">{{item.title}}</h3>
+                <p>歌手：<span ng-repeat="director in item.singer">{{director.name}}{{$last?'':'、'}}</span></p>
+                <p>描述：<span>{{item.summary('、')}}</span></p>
+            </div>
+        </div>
+    </a>
+</div>
